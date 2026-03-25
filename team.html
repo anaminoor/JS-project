@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sudhir Power | Team</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" type="image/png" href="4.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); }
+    .member { padding: 44px 40px; border-right: 1px solid var(--border); }
+    .member:last-child { border-right: none; }
+    .avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: var(--navy); display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800;
+      color: #fff; margin-bottom: 20px;
+    }
+    .member h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+    .member p { font-size: 14.5px; line-height: 1.8; color: slategray; font-weight: 300; }
+    .proj-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .proj-table tr { border-bottom: 1px solid var(--border); }
+    .proj-table tr:last-child { border-bottom: none; }
+    .proj-table td { padding: 12px 16px; font-size: 14px; font-weight: 300; vertical-align: top; }
+    .proj-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--navy); background: var(--off); width: 160px; white-space: nowrap; }
+    @media (max-width: 800px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .member { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="3.png" alt="Sudhir Power">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="team.html" class="active">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="lbl">Project Team</div>
+    <h1>Meet Our Team</h1>
+    <p class="ph-sub">First-Year Academic Project — Sudhir Power Limited Website</p>
+    <div class="ph-bar"></div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Team Members</div>
+    <h2>The People Behind This Project</h2>
+    <div class="bar" style="margin:10px 0 28px;"></div>
+    <div class="team-grid">
+      <div class="member">
+        <div class="avatar">NA</div>
+        <span class="badge">Team Leader</span>
+        <h3>Noor Anami</h3>
+        <p>Made sure that the project met all the requirements. Overall contribution to the project especially in HTML and CSS part.</p>
+      </div>
+      <div class="member">
+        <div class="avatar">AS</div>
+        <span class="badge">Team Member</span>
+        <h3>Arnav Sharma</h3>
+        <p>Helped to develop the part of the code for the website and overall contribution especially in Javascript.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec off">
+    <div class="lbl">Project Details</div>
+    <h2>About This Project</h2>
+    <div class="bar" style="margin:10px 0 28px;"></div>
+    <table class="proj-table">
+      <tr><td>Project Type</td><td>First-Year Web Development Project</td></tr>
+      <tr><td>Subject</td><td>Sudhir Power Limited — CPCB-IV+ Generator Solutions</td></tr>
+      <tr><td>Pages</td><td>Home, Products, Team, Contact</td></tr>
+      <tr><td>Technology</td><td>HTML5, CSS and Basics of JS</td></tr>
+      <tr><td>Fonts Used</td><td>Barlow Condensed (headings) + Source Serif 4 (body)</td></tr>
+      <tr><td>Colour Scheme</td><td>Navy Blue (navy) + White + Accent Blue (dodgerblue)</td></tr>
+      <tr><td>Images</td><td>Sourced from official Sudhir Power marketing materials</td></tr>
+      <tr><td>Year</td><td>2026</td></tr>
+    </table>
+  </div>
+
+  <footer>
+    <div class="ft">
+      <div class="ft-brand">
+        <img src="3.png" alt="Sudhir Power">
+        <p>Leading provider of CPCB-IV+ compliant diesel generator systems. Powering India's industries and infrastructure.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2dbdcd4ddf2c1c7d6dadbc0c2ddc5d7c09cd1dddf">[email&#160;protected]</a></p>
+        <p>1800-102-7475</p>
+        <p>www.sudhirpower.com</p>
+      </div>
+    </div>
+   <div class="fb">© 2026 Sudhir Power Limited. All rights reserved.</div>
+  </footer>
+
+  <a class="sticky" href="contact.html">Contact Us</a>
+
+</body>
+</html>

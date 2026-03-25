@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sudhir Power | Products</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" type="image/png" href="4.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Spec table */
+    .spec-list { margin-top: 14px; border: 1px solid var(--border); }
+    .spec-row { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key { padding: 9px 14px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; background: var(--off); color: var(--navy); border-right: 1px solid var(--border); }
+    .spec-val { padding: 9px 14px; font-size: 13.5px; color: darkgray; font-weight: 300; }
+
+    /* Catalogue table */
+    .cat-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead { background: var(--navy); }
+    thead th { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; padding: 14px 16px; text-align: left; white-space: nowrap; }
+    tbody tr:nth-child(even) { background: var(--off); }
+    tbody tr:hover { background: aliceblue; }
+    tbody td { padding: 11px 16px; border-bottom: 1px solid var(--border); font-weight: 300; white-space: nowrap; }
+    tbody td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; color: var(--navy); }
+
+    /* Feature grid */
+    .grid3 { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+    @media (max-width: 800px) { .grid3 { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="3.png" alt="Sudhir Power">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <div class="lbl">Product Range</div>
+    <h1>CPCB-IV+ Compliant<br>Generator Sets</h1>
+    <p class="ph-sub">7.5 kVA to 3750 kVA — Reliable Power for Every Need</p>
+    <div class="ph-bar"></div>
+  </div>
+
+  <div class="two">
+    <img src="1.jpg" alt="CPCB IV+ Generator">
+    <div class="col">
+      <div class="lbl">Flagship Range</div>
+      <h2>CPCB-IV+ Diesel Generator Sets</h2>
+      <div class="bar" style="margin:10px 0 16px;"></div>
+      <p>Our flagship range of diesel generator sets are fully compliant with CPCB-IV+ emission norms. Powered by Cummins engines and engineered for round-the-clock performance with minimal emissions and maximum uptime.</p>
+      <div class="spec-list">
+        <div class="spec-row"><div class="spec-key">Range</div><div class="spec-val">7.5 kVA – 3750 kVA</div></div>
+        <div class="spec-row"><div class="spec-key">Engine</div><div class="spec-val">Cummins Power Generation</div></div>
+        <div class="spec-row"><div class="spec-key">Emission Norm</div><div class="spec-val">CPCB-IV+ Compliant</div></div>
+        <div class="spec-row"><div class="spec-key">Enclosure</div><div class="spec-val">Acoustic Silent Canopy</div></div>
+        <div class="spec-row"><div class="spec-key">Control</div><div class="spec-val">Electronic ECU + Auto-Start AMF</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two">
+    <div class="col off">
+      <div class="lbl">Cummins Partnership</div>
+      <h2>Cummins Powered Silent Series</h2>
+      <div class="bar" style="margin:10px 0 16px;"></div>
+      <p>In partnership with Cummins Power Generation, our Silent Series generators are trusted by industry leaders across India. Designed for reliability in harsh conditions and critical power backup applications.</p>
+      <div class="spec-list">
+        <div class="spec-row"><div class="spec-key">Range</div><div class="spec-val">15 kVA – 3750 kVA</div></div>
+        <div class="spec-row"><div class="spec-key">Fuel System</div><div class="spec-val">High-Pressure Direct Injection</div></div>
+        <div class="spec-row"><div class="spec-key">Noise Level</div><div class="spec-val">&lt; 75 dB(A) @ 1 m</div></div>
+        <div class="spec-row"><div class="spec-key">Cooling</div><div class="spec-val">Radiator Air-Cooled</div></div>
+        <div class="spec-row"><div class="spec-key">Monitoring</div><div class="spec-val">Remote Monitoring (select models)</div></div>
+      </div>
+    </div>
+    <img src="5.jpeg" alt="Cummins Powered Range">
+  </div>
+
+  <div class="sec off">
+    <div class="lbl">Product Catalogue</div>
+    <h2>Complete Model Range</h2>
+    <div class="bar" style="margin:10px 0 28px;"></div>
+    <div class="cat-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Prime Power (kVA)</th><th>Standby Power (kVA)</th><th>Engine</th><th>Fuel Consumption (L/hr)</th><th>Noise (dB)</th><th>Compliance</th></tr>
+        </thead>
+        <tbody id="catalogue-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Technology</div>
+    <h2>Key Features Across All Models</h2>
+    <div class="bar" style="margin:10px 0 28px;"></div>
+    <div class="grid3">
+      <div class="gc"><div class="gc-icon">🖥️</div><h3>Electronic ECU</h3><p>Precision fuel management for optimal combustion, lower emissions, and real-time diagnostics.</p></div>
+      <div class="gc"><div class="gc-icon">🔇</div><h3>Silent Canopy</h3><p>Acoustic enclosures ensure noise levels below 75 dB(A) — safe for residential and hospital zones.</p></div>
+      <div class="gc"><div class="gc-icon">🌿</div><h3>After-Treatment</h3><p>Exhaust after-treatment devices reduce particulate matter and NOx by up to 90%.</p></div>
+      <div class="gc"><div class="gc-icon">⚙️</div><h3>Auto-Start AMF</h3><p>Automatic Mains Failure panel provides seamless switchover with zero manual intervention.</p></div>
+      <div class="gc"><div class="gc-icon">📡</div><h3>Remote Monitoring</h3><p>Real-time IoT-based monitoring and alerts for select models — track performance from anywhere.</p></div>
+      <div class="gc"><div class="gc-icon">🛡️</div><h3>Multi-Layer Protection</h3><p>Over-voltage, under-voltage, high temperature, and low oil pressure shutdown systems standard.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft">
+      <div class="ft-brand">
+        <img src="3.png" alt="Sudhir Power">
+        <p>Leading provider of CPCB-IV+ compliant diesel generator systems. Powering India's industries and infrastructure.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa93949c95ba898f9e9293888a958d9f88d4999597">[email&#160;protected]</a></p>
+        <p>1800-102-7475</p>
+        <p>www.sudhirpower.com</p>
+      </div>
+    </div>
+        <div class="fb">© 2026 Sudhir Power Limited. All rights reserved.</div>
+  </footer>
+
+  <a class="sticky" href="contact.html">Contact Us</a>
+
+  <script>
+    const products = [
+      { model: "SPL-7.5",   prime: 7.5,   standby: 8.5,   engine: "Cummins B Series",   fuel: 2.1,   noise: 72, compliance: "CPCB-IV+" },
+      { model: "SPL-10",    prime: 10,    standby: 11,    engine: "Cummins B Series",   fuel: 2.6,   noise: 72, compliance: "CPCB-IV+" },
+      { model: "SPL-15",    prime: 15,    standby: 16.5,  engine: "Cummins B Series",   fuel: 3.8,   noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-25",    prime: 25,    standby: 27.5,  engine: "Cummins B Series",   fuel: 6.2,   noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-40",    prime: 40,    standby: 44,    engine: "Cummins B Series",   fuel: 9.5,   noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-63",    prime: 63,    standby: 69,    engine: "Cummins B Series",   fuel: 14.8,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-82.5",  prime: 82.5,  standby: 90,    engine: "Cummins C Series",   fuel: 19.2,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-100",   prime: 100,   standby: 110,   engine: "Cummins C Series",   fuel: 23.4,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-125",   prime: 125,   standby: 137.5, engine: "Cummins C Series",   fuel: 29.1,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-160",   prime: 160,   standby: 176,   engine: "Cummins L Series",   fuel: 37.2,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-200",   prime: 200,   standby: 220,   engine: "Cummins L Series",   fuel: 46.5,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-250",   prime: 250,   standby: 275,   engine: "Cummins L Series",   fuel: 58.0,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-320",   prime: 320,   standby: 352,   engine: "Cummins N Series",   fuel: 73.4,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-400",   prime: 400,   standby: 440,   engine: "Cummins N Series",   fuel: 91.2,  noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-500",   prime: 500,   standby: 550,   engine: "Cummins K Series",   fuel: 113.0, noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-625",   prime: 625,   standby: 687.5, engine: "Cummins K Series",   fuel: 141.0, noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-750",   prime: 750,   standby: 825,   engine: "Cummins K Series",   fuel: 169.0, noise: 75, compliance: "CPCB-IV+" },
+      { model: "SPL-1000",  prime: 1000,  standby: 1100,  engine: "Cummins QSK Series", fuel: 225.0, noise: 75, compliance: "CPCB-IV"  },
+      { model: "SPL-1250",  prime: 1250,  standby: 1375,  engine: "Cummins QSK Series", fuel: 281.0, noise: 75, compliance: "CPCB-IV"  },
+      { model: "SPL-1500",  prime: 1500,  standby: 1650,  engine: "Cummins QSK Series", fuel: 338.0, noise: 75, compliance: "CPCB-IV"  },
+      { model: "SPL-2000",  prime: 2000,  standby: 2200,  engine: "Cummins QST Series", fuel: 450.0, noise: 78, compliance: "CPCB-IV"  },
+      { model: "SPL-2500",  prime: 2500,  standby: 2750,  engine: "Cummins QST Series", fuel: 562.0, noise: 78, compliance: "CPCB-IV"  },
+      { model: "SPL-3000",  prime: 3000,  standby: 3300,  engine: "Cummins QSK60",      fuel: 674.0, noise: 80, compliance: "CPCB-IV"  },
+      { model: "SPL-3750",  prime: 3750,  standby: 4125,  engine: "Cummins QSK78",      fuel: 843.0, noise: 80, compliance: "CPCB-IV"  },
+    ];
+
+    const tbody = document.getElementById("catalogue-body");
+    tbody.innerHTML = products.map(p => {
+      const isPlus = p.compliance === "CPCB-IV+";
+      const badge = `<span class="badge${isPlus ? " green" : ""}">${p.compliance}</span>`;
+      return `<tr>
+        <td>${p.model}</td>
+        <td>${p.prime}</td>
+        <td>${p.standby}</td>
+        <td>${p.engine}</td>
+        <td>${p.fuel}</td>
+        <td>&lt;${p.noise}</td>
+        <td>${badge}</td>
+      </tr>`;
+    }).join("");
+  </script>
+
+</body>
+</html>
